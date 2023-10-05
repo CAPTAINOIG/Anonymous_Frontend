@@ -1,0 +1,23 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.background{
+    background-image: url(../public/image/dragon-scales.png);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#view{
+    width: 100%;
+    background-color: purple;
+}
+
+
+
+
+
