@@ -40,7 +40,8 @@ const Signup = () => {
     });
 
   }
-  let endpoint = 'http://localhost:4000/user/signup'
+  // let endpoint = 'http://localhost:4000/user/signup'
+  let endpoint = 'https://anonymous-backend-o0f2.onrender.com/user/signup'
   const onSubmit = (data) => {
     axios.post(endpoint, data)
       .then((result) => {
