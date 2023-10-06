@@ -31,11 +31,11 @@ const Dashboard = () => {
     <>
       <div className='background'>
       
-        <div className='absolute bg-blue-950 lg:w-[40%] mt-48 lg:ms-[480px] ms-[20px]  w-[90%] rounded px-2'>
+        <div className='absolute bg-blue-950 lg:w-[40%] mt-48 lg:ms-[480px] ms-[5px] w-[96%] rounded px-1'>
           <h1 className='text-4xl text-center my-3 text-white font-bold font-serif'>Hi, {userData}</h1>
-          <div className='flex justify-between '>
-            <a className='text-red-500 my-2 hover:text-fuchsia-500 lg:ms-10 font-serif'>{`https://beautiful-taffy-79e1d2.netlify.app/message/${userData}`}</a>
-            <button onClick={handleCopyAvatarClick} className='text-white my-2 hover:text-blue-500  font-serif'><span className=''><MdContentCopy size={20}/></span></button>
+          <div className='flex'>
+            <a className='text-red-500 my-2 hover:text-fuchsia-500 font-serif'>{`https://beautiful-taffy-79e1d2.netlify.app/message/${userData}`}</a>
+            <button onClick={handleCopyAvatarClick} className='text-white my-2 lg:mt-0  hover:text-blue-500 font-serif'><span className=''><MdContentCopy size={20}/></span></button>
             <div className='text-white'>{link}</div>
           </div>
           <p className='text-white font-serif'>Copy your profile link ❤ to get responses from your friend. to check out responses you can go to "View Messages". 🍟😃 </p>
