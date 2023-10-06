@@ -4,6 +4,7 @@ import copy from 'clipboard-copy'; // Import clipboard-copy library
 import {MdContentCopy} from 'react-icons/md'
 const Dashboard = () => {
   const [userData, setUserData] = useState('');
+  const [link, setLink] = useState("")
   const avatarImageUrl = 'https://example.com/avatar.jpg'; // Replace with your avatar URL
 
   useEffect(() => {
@@ -18,7 +19,8 @@ const Dashboard = () => {
     copy(`https://beautiful-taffy-79e1d2.netlify.app/message/${userData}`)
 
       .then(() => {
-        alert('Avatar URL copied to clipboard!');
+        // alert('copied!');
+        setLink('copied!')
       })
       .catch((error) => {
         console.error('Failed to copy to clipboard: ', error);
@@ -28,11 +30,13 @@ const Dashboard = () => {
   return (
     <>
       <div className='background'>
-        <div className='absolute bg-blue-950 lg:w-[30%] mt-48 lg:ms-[480px] ms-[20px]  w-[90%] rounded px-2'>
+      
+        <div className='absolute bg-blue-950 lg:w-[40%] mt-48 lg:ms-[480px] ms-[20px]  w-[90%] rounded px-2'>
           <h1 className='text-4xl text-center my-3 text-white font-bold font-serif'>Hi, {userData}</h1>
-          <div className='text-center flex'>
-            <a className='text-red-500 my-2 hover:text-fuchsia-500  font-serif'>{`https://beautiful-taffy-79e1d2.netlify.app/message/${userData}`}</a>
-            <button onClick={handleCopyAvatarClick} className='text-white my-2 hover:text-blue-500  font-serif'><span><MdContentCopy size={20}/></span></button>
+          <div className='flex justify-between '>
+            <a className='text-red-500 my-2 hover:text-fuchsia-500 lg:ms-10 font-serif'>{`https://beautiful-taffy-79e1d2.netlify.app/message/${userData}`}</a>
+            <button onClick={handleCopyAvatarClick} className='text-white my-2 hover:text-blue-500  font-serif'><span className=''><MdContentCopy size={20}/></span></button>
+            <div className='text-white'>{link}</div>
           </div>
           <p className='text-white font-serif'>Copy your profile link ❤ to get responses from your friend. to check out responses you can go to "View Messages". 🍟😃 </p>
           <div id='view' className='my-5 h-10 text-center items-center rounded-lg'>
