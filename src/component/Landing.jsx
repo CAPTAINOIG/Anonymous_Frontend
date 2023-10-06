@@ -22,7 +22,7 @@ const Landing = () => {
               <p className='text-white mt-10 text-5xl'><GiSpiderMask size={100}/></p>
               <h1 className='text-4xl font-bold text-white mt-10'>Welcome</h1>
               <h2 className='text-white font-semibold mt-10'>Here you can send and receive message anonymously</h2>
-              <Link className='underline text-white mb-10 font-semibold mt-5 text-2xl' to="/signup">Sign up here</Link>
+              <Link className='underline text-white mb-10 font-semibold mt-5 text-2xl' to="/signin">Sign in here</Link>
             </div>
             </div>
             <Footer/>

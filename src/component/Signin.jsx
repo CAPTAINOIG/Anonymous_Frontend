@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import swal from 'sweetalert'
 
 
@@ -71,7 +71,12 @@ let endpoint = 'https://anonymous-backend-o0f2.onrender.com/user/signin'
         <p className='text-red-700'>{errors.email?.message}</p>
       </div>
       <button className='bg-white w-[100%] rounded text-xl text-blue-950 font-bold mb-10 my-5' type='submit'>submit</button>
+      <div className='flex justify-between text-white mb-5'>
+        <p>Don't have Account?</p>
+        <Link to="/signup">Sign up Here</Link>
+      </div>
       </form>
+      
     </div>
     </section>
   )

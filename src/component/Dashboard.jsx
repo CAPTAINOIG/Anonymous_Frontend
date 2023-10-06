@@ -39,7 +39,7 @@ const Dashboard = () => {
             <div className='text-white'>{link}</div>
           </div>
           <p className='text-white font-serif'>Copy your profile link ❤ to get responses from your friend. to check out responses you can go to "View Messages". 🍟😃 </p>
-          <div id='view' className='my-5 h-10 text-center items-center rounded-lg'>
+          <div id='view' className='my-5 h-10 cursor-pointer text-center items-center rounded-lg'>
             <Link className='hover:text-blue-950 text-xl font-serif text-white' to="/View">View Messages</Link>
           </div>
         </div>
