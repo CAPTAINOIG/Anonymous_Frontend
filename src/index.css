@@ -12,6 +12,14 @@
     background-size: cover;
     position: relative;
 }
+.background1{
+    background-image: url(../public/image/dragon-scales.png);
+    height: 500vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 #view{
     width: 100%;
     background-color: purple;

@@ -32,7 +32,8 @@ const Signin = () => {
               });
         } 
 
-let endpoint = 'http://localhost:4000/user/signin'
+// let endpoint = 'http://localhost:4000/user/signin'
+let endpoint = 'https://anonymous-backend-o0f2.onrender.com/user/signin'
   const onSubmit = (data) => {
     axios.post(endpoint, data)
       .then((result) => {
@@ -40,7 +41,7 @@ let endpoint = 'http://localhost:4000/user/signin'
         setMessage(result.data.message)
         if(result.data.status){
             navigate('/dashboard')
-            localStorage.setItem('user', JSON.stringify(result.data))
+            localStorage.setItem('user', JSON.stringify(result.data.response))
             sweetalert()
         }
       })
