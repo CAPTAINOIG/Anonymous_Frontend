@@ -45,12 +45,12 @@ const Message = () => {
           localStorage.setItem('details', JSON.stringify(data))
           localStorage.setItem('detailsTwo', JSON.stringify(result))
           setMessage("")
-          setLoading("")
         })
         .catch((err) => {
           console.log(err);
           setSentMessage(result.data.message)
           setLoading(false)
+          setLoading("")
 
         })
     }

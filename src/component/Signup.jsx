@@ -60,6 +60,7 @@ const Signup = () => {
           navigate('/signin');
         } else {
           sweetAlertError(result.data.message);
+          setLoading("")
         }
       })
       .catch((err) => {

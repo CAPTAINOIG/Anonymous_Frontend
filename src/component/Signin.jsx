@@ -59,6 +59,7 @@ let endpoint = 'https://anonymous-backend-o0f2.onrender.com/user/signin'
         }
        else {
         sweetAlertError(result.data.message);
+        setLoading("")
       }
       })
       .catch((err) => {
