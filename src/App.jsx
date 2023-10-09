@@ -9,6 +9,7 @@ import Message from './component/Message'
 import View from './component/View'
 import Faqs from './component/Faqs'
 import About from './component/About'
+import Error from './component/Error'
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard/>}/>
         <Route path='/message/:userName' element={<Message/>}/>
         <Route path='/view' element={<View/>}/>
+        <Route path='/*' element={<Error/>}/>
      </Routes>
     </>
   )
