@@ -34,7 +34,6 @@ const Message = () => {
     console.log(data);
     if (message == '') {
       setSentMessage('Input cannot be empty')
-      setLoading("")
     }
     else {
       axios.post(endpoint, data)
@@ -44,6 +43,7 @@ const Message = () => {
           sweetAlert()
           localStorage.setItem('details', JSON.stringify(data))
           localStorage.setItem('detailsTwo', JSON.stringify(result))
+          setLoading("")
           setMessage("")
         })
         .catch((err) => {
@@ -51,7 +51,6 @@ const Message = () => {
           setSentMessage(result.data.message)
           setLoading(false)
           setLoading("")
-
         })
     }
   }
@@ -77,7 +76,7 @@ const Message = () => {
         <div id="charCount" className="text-sm text-fuchsia-700 font-serif">Characters left: <span id="countDown" className="font-bold text-red-700">200</span></div>
 
         <button className='bg-fuchsia-700 w-[100%] rounded text-xl text-blue-950 font-bold mb-10 my-5' onClick={userMessage}>
-          {loading ? <FiLoader className='mx-auto font-bold text-3xl text-white' /> : 'Send Message'}
+          {loading ? 'Loading...'  : 'Send Message'}
         </button>
       </div>
     </section>

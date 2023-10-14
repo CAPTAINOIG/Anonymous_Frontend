@@ -85,7 +85,7 @@ let endpoint = 'https://anonymous-backend-o0f2.onrender.com/user/signin'
         <p className='text-red-700'>{errors.email?.message}</p>
       </div>
       <button className='bg-white w-[100%] rounded text-xl text-blue-950 font-bold mb-10 my-5' type='submit'>
-        {loading ? <FiLoader className='mx-auto font-bold text-3xl text-red-700' /> : 'Submit'}
+        {loading ? 'Loading...'  : 'Submit'}
         </button>
 
 
