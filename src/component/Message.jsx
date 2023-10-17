@@ -35,6 +35,7 @@ const Message = () => {
     console.log(data);
     if (message == '') {
       setSentMessage('Input cannot be empty')
+      setLoading(false)
     }
     else {
       axios.post(endpoint, data)
