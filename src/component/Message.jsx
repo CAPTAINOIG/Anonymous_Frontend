@@ -2,7 +2,8 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import swal from 'sweetalert'
-import { FiLoader } from 'react-icons/fi'
+// import { FiLoader } from 'react-icons/fi'
+import gif from '../assets/image/gif.gif'
 
 
 const Message = () => {
@@ -76,7 +77,7 @@ const Message = () => {
         <div id="charCount" className="text-sm text-fuchsia-700 font-serif">Characters left: <span id="countDown" className="font-bold text-red-700">200</span></div>
 
         <button className='bg-fuchsia-700 w-[100%] rounded text-xl text-blue-950 font-bold mb-10 my-5' onClick={userMessage}>
-          {loading ? 'Loading...'  : 'Send Message'}
+          {loading ? <div className='flex justify-center'><img src={gif} alt="" width={30} /></div>  : 'Send Message'}
         </button>
       </div>
     </section>

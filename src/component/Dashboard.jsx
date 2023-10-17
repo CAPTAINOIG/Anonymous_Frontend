@@ -16,7 +16,7 @@ const Dashboard = () => {
 
   const handleCopyAvatarClick = () => {
     
-    copy(`https://beautiful-taffy-79e1d2.netlify.app/message/${userData}`)
+    copy(`https://captainoig-anonymous-app.netlify.app/message/${userData}`)
 
       .then(() => {
         // alert('copied!');
@@ -33,7 +33,7 @@ const Dashboard = () => {
         <div className='absolute bg-blue-950 lg:w-[40%] mt-48 lg:ms-[480px] ms-[5px] w-[96%] rounded px-1'>
           <h1 className='text-4xl text-center my-3 text-white font-bold font-serif'>Hi, {userData}</h1>
           <div className='flex'>
-            <a className='text-red-500 my-2 hover:text-fuchsia-500 font-serif'>{`https://beautiful-taffy-79e1d2.netlify.app/message/${userData}`}</a>
+            <a className='text-red-500 my-2 hover:text-fuchsia-500 font-serif'>{`https://captainoig-anonymous-app.netlify.app/message/${userData}`}</a>
             <button onClick={handleCopyAvatarClick} className='text-white my-2 lg:mt-0 hover:text-blue-500 font-serif'><span className=''><MdContentCopy size={20}/></span></button>
             <div className='text-white'>{link}</div>
           </div>

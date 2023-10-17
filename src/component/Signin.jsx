@@ -5,7 +5,8 @@ import * as yup from 'yup'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import swal from 'sweetalert'
-import {FiLoader} from 'react-icons/fi'
+// import {FiLoader} from 'react-icons/fi'
+import gif from '../assets/image/gif.gif'
 
 
 const Signin = () => {
@@ -85,7 +86,7 @@ let endpoint = 'https://anonymous-backend-o0f2.onrender.com/user/signin'
         <p className='text-red-700'>{errors.email?.message}</p>
       </div>
       <button className='bg-white w-[100%] rounded text-xl text-blue-950 font-bold mb-10 my-5' type='submit'>
-        {loading ? 'Loading...'  : 'Submit'}
+        {loading ? <div className='flex justify-center'><img src={gif} alt="" width={30} /></div>  : 'Submit'}
         </button>
 
 
