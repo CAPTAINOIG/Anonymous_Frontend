@@ -16,7 +16,7 @@ const Signin = () => {
     const [loading, setLoading] = useState(false)
     const schema = yup.object({
         userName: yup.string().required(),
-        email: yup.string().email().required(),
+        password: yup.string().required(),
       })
       .required()
       
@@ -81,9 +81,9 @@ let endpoint = 'https://anonymous-backend-o0f2.onrender.com/user/signin'
         <p className='text-red-700'>{errors.userName?.message}</p>
       </div>
       <div className='my-5 text-white font-bold text-1xl'>
-        <label htmlFor="">Email</label> <br />
-        <input className='mt-2 w-[100%] rounded text-black' {...register("email")} />
-        <p className='text-red-700'>{errors.email?.message}</p>
+        <label htmlFor="">Password</label> <br />
+        <input className='mt-2 w-[100%] rounded text-black' {...register("password")} />
+        <p className='text-red-700'>{errors.password?.message}</p>
       </div>
       <button className='bg-white w-[100%] rounded text-xl text-blue-950 font-bold mb-10 my-5' type='submit'>
         {loading ? <div className='flex justify-center'><img src={gif} alt="" width={30} /></div>  : 'Submit'}
