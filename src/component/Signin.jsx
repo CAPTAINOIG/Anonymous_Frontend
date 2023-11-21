@@ -51,11 +51,11 @@ let endpoint = 'https://anonymous-backend-o0f2.onrender.com/user/signin'
     setLoading(true)
     axios.post(endpoint, data)
       .then((result) => {
-        console.log(result.data);
+        console.log(result.data.user);
         setMessage(result.data.message)
         if(result.data.status){
             navigate('/dashboard')
-            localStorage.setItem('user', JSON.stringify(result.data.response))
+            localStorage.setItem('user', JSON.stringify(result.data.user))
             sweetalert()
         }
        else {

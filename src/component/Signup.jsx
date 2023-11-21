@@ -49,6 +49,7 @@ const Signup = () => {
   };
 
   const endpoint = 'https://anonymous-backend-o0f2.onrender.com/user/signup';
+// let endpoint = 'http://localhost:4000/user/signup'
 
   const onSubmit = (data) => {
     setLoading(true);
