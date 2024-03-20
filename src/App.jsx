@@ -17,7 +17,7 @@ function App() {
   
 
   return (
-    <>
+    <div className='font-[Mirza]'>
     
     
      <Routes>
@@ -31,7 +31,7 @@ function App() {
         <Route path='/view' element={<View/>}/>
         <Route path='/*' element={<Error/>}/>
      </Routes>
-    </>
+    </div>
   )
 }
 

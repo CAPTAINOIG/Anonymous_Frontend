@@ -18,7 +18,7 @@ const Landing = () => {
     <>
     <Navbar/>
        <div className='background'>
-            <div style={mySection} className='bg-blue-950 lg:pt-10 mt-10 font-serif text-center flex flex-col justify-center items-center rounded-xl px-2 lg:w-1/3 md:w-1/2 w-[90%]'>
+            <div style={mySection} className='bg-blue-950 lg:pt-10 mt-10 text-center flex flex-col justify-center items-center rounded-xl px-2 lg:w-1/3 md:w-1/2 w-[90%]'>
               <p className='text-white mt-10 text-5xl'><GiSpiderMask size={100}/></p>
               <h1 className='text-4xl font-bold text-white mt-10'>Welcome</h1>
               <h2 className='text-white font-semibold mt-10'>Here you can send and receive message anonymously</h2>

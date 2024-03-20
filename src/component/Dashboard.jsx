@@ -21,6 +21,9 @@ const Dashboard = () => {
       .then(() => {
         // alert('copied!');
         setLink('copied!')
+        setTimeout(() => {
+          handleCopyAvatarClick()
+        }, 3000);
       })
       .catch((error) => {
         console.error('Failed to copy to clipboard: ', error);

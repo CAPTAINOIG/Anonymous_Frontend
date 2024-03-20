@@ -67,7 +67,7 @@ const Signup = () => {
       })
       .catch((err) => {
         console.log(err);
-        sweetAlertError('An error occurred while signing up.');
+        sweetAlertError('Duplicate user found.');
       })
       .finally(() => {
         setLoading(false);
